@@ -1,0 +1,144 @@
+/* Page Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+header {
+    width: 100%;
+    background: linear-gradient(to right, #007bff, #ff4500); /* Cold blue to warm red */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.tagline {
+    font-size: 1rem;
+    color: #f0f0f0;
+    margin-top: 5px;
+    text-align: center;
+}
+
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+#logo {
+    width: 50px;
+    float: right;
+    margin-top: -40px;
+}
+
+nav {
+    width: 100%;
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    font-size: 1.1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* FAQ Styles */
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 40px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.faq-item {
+    width: 100%;
+    max-width: 600px;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px; /* Ensures all buttons have a minimum height */
+    background: linear-gradient(to bottom, #007bff, #ff4500); /* Blue at the top, Red at the bottom */
+}
+
+
+
+/* This ensures the colors are applied properly */
+.faq-question:nth-child(1) { background-color: #007bff; } /* Blue */
+.faq-question:nth-child(2) { background-color: #3399ff; }
+.faq-question:nth-child(3) { background-color: #66b3ff; }
+.faq-question:nth-child(4) { background-color: #99ccff; }
+.faq-question:nth-child(5) { background-color: #ff9966; }
+.faq-question:nth-child(6) { background-color: #ff4500; } /* Red */
+
+.faq-question:hover {
+    filter: brightness(0.9);
+}
+
+
+.faq-answer {
+    display: none; /* Hides answers by default */
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f4f7fb;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button:focus {
+    outline: none;
+}

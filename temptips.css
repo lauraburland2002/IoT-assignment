@@ -1,0 +1,168 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    width: 100%;
+    background: linear-gradient(to right, #007bff, #ff4500); /* Similar to a thermometer */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.tagline {
+    font-size: 1rem;
+    color: #f0f0f0;
+    margin-top: 5px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+#logo {
+    width: 50px;
+    float: right;
+    margin-top: -40px;
+}
+
+nav {
+    width: 100%;
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    font-size: 1.1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Main Content */
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 40px;
+}
+
+/* Temperature Tips Section */
+.temp-tips-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.temp-tip {
+    width: 150px;
+    height: 150px;
+    position: relative; /* Ensure proper positioning */
+    perspective: 1000px;
+}
+
+
+.temp-tip-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    background: linear-gradient(to bottom right, #007bff, #ff4500); /* Diagonal gradient */
+}
+
+
+
+.temp-tip:hover .temp-tip-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front and back styling */
+/* Front and back styling */
+.temp-tip-front,
+.temp-tip-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backface-visibility: hidden;
+}
+
+.temp-tip-front {
+    background: linear-gradient(to bottom right, #007bff, #ff4500); /* Diagonal gradient */
+    color: white; /* White text for better contrast */
+}
+
+.temp-tip-back {
+    background-color: white; /* White background for the back */
+    color: #333; /* Dark text color for readability */
+    transform: rotateY(180deg);
+}
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .temp-tip {
+        width: 130px;
+        height: 130px;
+    }
+
+    .temp-tip-front,
+    .temp-tip-back {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
